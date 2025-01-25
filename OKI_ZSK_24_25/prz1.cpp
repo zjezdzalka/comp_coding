@@ -1,7 +1,6 @@
 #include<iostream>
 #include<algorithm>
-
-int values[1000000];
+#include<vector>
 
 int main(){
 	std::ios_base::sync_with_stdio(false);
@@ -13,9 +12,13 @@ int main(){
 	
 	int i, maks = -1, num, add = 0;
 	
+	std::vector<int> values(n);
+	
 	for(i=0;i<m;++i){
 		std::cin>>num;
+		
 		num -= 1;
+		
 		if(num != n){
 			values[num] = std::max(values[num]+1, add+1);
 			maks = std::max(values[num], maks);
