@@ -17,15 +17,23 @@ int main(){
 	for(i=0;i<x.length();++i){
 		if(letters[x[i]]){
 			letters[x[i]] += 1;
-			if(letters[x[i]] >= maks){
+			if(letters[x[i]] >  maks){
 				top = x[i];
+				maks = letters[x[i]];	
+			}
+			else if(letters[x[i]] == maks){
+				top = max(top, x[i]);
 				maks = letters[x[i]];	
 			}
 		}      
 		else{
 			letters[x[i]] = 1;
-			if(letters[x[i]] >= maks){
+			if(letters[x[i]] > maks){
 				top = x[i];
+				maks = letters[x[i]];	
+			}
+			else if(letters[x[i]] == maks){
+				top = max(top, x[i]);
 				maks = letters[x[i]];	
 			}
 		}
