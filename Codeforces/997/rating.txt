@@ -1,2 +1,2 @@
-rating status: 404 (+404)
+rating status: 405 (+405)
 rank: newbie (unrated -> newbie)
