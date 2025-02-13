@@ -1,7 +1,4 @@
 #include<iostream>
-#include<algorithm>
-
-int values[1000002];     // 1 <= n <= 10^6
 
 int main(){
 	std::ios_base::sync_with_stdio(false);
@@ -10,20 +7,23 @@ int main(){
 	
 	int n,m;
 	std::cin>>n>>m;
+
+	int values[n+2];     // 1 <= n <= 10^6
+
+	std::fill(values, values+n+2, 0);
 	
-	int i, maks = -1, num, add = 0;
+	int maks = -1, num, add = 0;
 	
-	for(i=0;i<m;++i){
+	while(m--){
 		std::cin>>num;
 		
-		values[num] = values[num]+1 > add+1 ? values[num]+1 : add+1;
+		values[n-num] = values[n-num]+1 > add+1 ? values[n-num]+1 : add+1;
 
-		if(num != n+1) maks = values[num] > maks ? values[num] : maks;
-		else add = maks;
+		(num != n+1) ? maks = (values[n-num] > maks ? values[n-num] : maks) : add = maks;
 	}
 	
-	for(i=1;i<=n;++i){
-		std::cout<<(add > values[i] ? add : values[i])<<" ";
+	while(n--){
+		std::cout<<(add > values[n] ? add : values[n])<<" ";
 	}
 	
 	return 0;
