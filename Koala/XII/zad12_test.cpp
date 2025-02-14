@@ -6,7 +6,7 @@ int solve(ofstream& file, vector<pair<int,int>> inOut = {}, map<int, bool> check
         int i, j;
         int lines_used = 0; // ilość liń które są zajęte
 
-        vector<vector<int>> lines(n, vector<int>(8, 0)); // 9 rzędów po 8 falseów, oznaczających, czy ktoś siedzi na danym miejscu na danej stacji
+        vector<vector<int>> lines(n, vector<int>(8, 0)); // n rzędów po 8 falseów, oznaczających, czy ktoś siedzi na danym miejscu na danej stacji
 
         for (i = 0; i < n; ++i) {
             pair<int, int> cur = inOut[arr[i] - 1]; // miejsce wsiadania i wysiadania dla elementu w kolejności permutacji
