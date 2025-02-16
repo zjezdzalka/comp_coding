@@ -65,7 +65,7 @@ int solve(ofstream& file, vector<pair<int,int>> inOut = {}, map<int, bool> check
             continue; // jeśli i już było użyte to omiń
         }
         else{
-            arr.push_back(i); // dodaje i do permutajci
+            arr.push_back(i); // dodaje i do permutacji
             checked[i] = true; // zaznacza że element i jest już użyty
             res += solve(file, inOut, checked, arr, lev+1, n); // wypisz ilość wyników podciągów permutacji spełniających warunki
             checked[i] = false; // zaznacza że element i już nie jest użyty
