@@ -14,14 +14,14 @@ int main(){
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int a,b,c,d;
+    long long a,b,c,d;
 
     cin>>a>>b>>c>>d;
 
-    int e = a*d + c*b;
-    int f = b*d;
+    long long e = a*d + c*b;
+    long long f = b*d;
 
-    int g = __gcd(e,f);
+    long long g = __gcd(e,f);
 
     cout<<e/g<<"/"<<f/g<<endl;
 
