@@ -2,8 +2,8 @@
 using namespace std;
 
 void sort(int a, int b, int c){
-    if(a>c) swap(a,c);
-    if(a>b) swap(b,c);  
+    if(b>c) swap(b,c);
+    if(a>b) swap(a,b);  
     if(b>c) swap(b,c);
     cout<<a<<" "<<b<<" "<<c<<"\n";
 }

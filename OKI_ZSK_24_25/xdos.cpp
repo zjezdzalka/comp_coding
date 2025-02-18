@@ -2,11 +2,11 @@
 using namespace std;
 
 void solve(int x){
-    int sum = 1;
+    long long sum = 1;
     for(int i=2;i*i<=x;++i){
         if(x%i == 0){
             sum += i;
-            if(i != x/i){
+            if(i * i != x){
                 sum += x/i;
             }
         }
@@ -16,7 +16,7 @@ void solve(int x){
         cout<<"OK\n";
     }
     else if(sum < x){
-        cout<<"NIEDOSTATECZNA   \n";
+        cout<<"NIEDOSTATECZNA\n";
     }
     else{
         cout<<"WIELKA\n";
